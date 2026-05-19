@@ -83,7 +83,7 @@ To see your changes locally:
 
 ### Adding VODs
 
-Manually adding VODs can be added in two ways:
+Manually adding VODs can be done in two ways:
 
 1. From a CSV file
 2. From a Google Sheet
@@ -174,7 +174,7 @@ To export VODs to the Google Sheet from the local database, run:
 python3 -m flask export-sheet
 ```
 
-On production, new updates are typically pulled from the Google Sheet by running the same command.
+On production, new updates are typically pulled to and from the Google Sheet by running the same commands.
 
 ### Adding VODs from a YouTube channel
 
@@ -288,8 +288,8 @@ After verifying the new VODs you can export them to either a CSV file or a Googl
 python3 -m flask export-csv
 ```
 
-On the production site to get the new VODs, I pull the changes to
-`data/vods.csv` and then run:
+On the production site to get the new VODs, changes are pulled to
+`data/vods.csv` and then the CSV is ingested with:
 
 ```sh
 python3 -m flask ingest-csv
